@@ -1,0 +1,121 @@
+Act as an expert web developer. Your task is to create a complete, single-file personal portfolio website for a student named Fengshuo Liu. The website should be modern, professional, responsive, and use a clean dark-theme design. It is intended for admissions committees at top-tier U.S. Master's programs in fields like Scientific Computing and Quantitative Finance.
+
+Please adhere to the following specifications:
+
+1. Technology Stack:
+
+Use HTML5.
+
+Use Bootstrap 5 for the grid system, components (like cards and buttons), and overall styling. Ensure it's responsive.
+
+Use Font Awesome for icons (e.g., for contact links).
+
+All CSS and JavaScript should be included directly within the HTML file in <style> and <script> tags for simplicity. Do not create separate files.
+
+2. Website Structure (Single Scrolling Page):
+
+Fixed Navbar: A navigation bar that stays at the top as the user scrolls. It should contain links that smoothly scroll to the following sections: Home, About, Projects, Experience, Education, Contact.
+
+Home (Hero Section): A full-height section with a welcoming message.
+
+About Section: A brief introduction and skills summary.
+
+Projects Section: Showcase key academic and personal projects using Bootstrap cards. This is the most important section.
+
+Experience Section: A timeline of professional internships.
+
+Education Section: Details of the dual-degree program.
+
+Contact Section: Links to social and professional profiles.
+
+Footer: A simple footer with a copyright notice.
+
+3. Content (Use the exact details below, derived from the user's CV):
+
+Navbar Title: FENGSHUO LIU
+
+Home Section:
+
+Main Heading: FENGSHUO LIU
+
+Subheading/Tagline: Quantitative Researcher | Applied Mathematician | Financial Engineer
+
+Buttons: A primary button "View My Projects" (linking to the Projects section) and a secondary button "Download CV" (use # for the link for now).
+
+About Section:
+
+Title: About Me
+
+Paragraph: "I am a highly motivated dual-degree student in Applied Mathematics at the University of Birmingham and Information & Computing Science at Jinan University. I am passionate about the intersection of machine learning, stochastic modeling, and high-performance computing to solve complex challenges in financial markets. My goal is to pursue a Master's degree to deepen my expertise in scientific computing and quantitative analysis."
+
+Skills List: "Quantitative Analysis", "Machine Learning", "Financial Modeling", "Evolutionary Computation", "Python (Pandas, Scikit-learn)", "Monte-Carlo Simulation".
+
+Projects Section:
+
+Title: Projects Portfolio
+
+Project 1 (Card):
+
+Title: Evolutionary Ensemble Learning for Quant Trading 
+
+Description: "Led a research group to develop and live-trade a novel strategy in A-share/ETF markets. Utilized evolutionary-ensemble computation to integrate heterogeneous models, achieving a Sharpe Ratio of 5.9 and an annualized return over 235% in a live environment." 
+
+
+Project 2 (Card):
+
+Title: High-Performance Monte-Carlo Pricing Engine 
+
+Description: "Developed a pricing engine for equity-linked snowball autocallables using Monte-Carlo simulation with 20k antithetic paths. The engine delivers Present Value and Delta in under 1 second and features plug-and-play volatility surfaces." 
+
+Project 3 (Card):
+
+Title: Alpha Factor Development (WorldQuant Challenge) 
+
+Description: "Designed and submitted an active alpha factor for the Chinese Top 3000 stock universe. My contribution successfully reached the Bronze Level in the highly competitive 2023 challenge, validating its effectiveness." 
+
+Experience Section:
+
+Title: Professional Experience
+
+Job 1:
+
+Title/Company: Securities Investment Intern - Guosen Securities 
+
+Dates: Jul. 2025 - Present 
+
+Description: "Conducted in-depth analysis of Vanilla and Barrier Options and contributed to trading strategy development. Assisted in risk management and basic hedging strategies." 
+
+Job 2:
+
+Title/Company: Investment Banking Intern - CITIC Securities 
+
+Dates: Jul. 2024 - Oct. 2024 
+
+Description: "Assisted in cleaning audited statements for a Main-Board IPO prospectus and participated in authoring a 20-page due-diligence memo adopted by the VP for the CSRC response." 
+
+Education Section:
+
+Title: Education
+
+Degree 1:
+
+Degree/University: BSc Applied Mathematics - University of Birmingham 
+
+Dates: Sep. 2022 - Jun. 2025 
+
+Degree 2:
+
+Degree/University: BSc Information & Computing Science - Jinan University 
+
+Dates: Sep. 2022 - Jun. 2026 
+
+Awards: "First Honor Scholarship of JNU (Top 2% of major)" 
+
+
+Contact Section:
+
+Title: Get In Touch
+
+Links (with Font Awesome icons): Email (use a placeholder your.email@example.com), LinkedIn (use #), GitHub (use #).
+
+Final Instruction: Please generate the complete code in a single HTML file. The design should be elegant and prioritize readability for a professional audience. Add subtle animations like fade-in effects for sections as they scroll into view.
