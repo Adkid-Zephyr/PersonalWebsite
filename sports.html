@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond the Finish Line - Fengshuo Liu</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #64ffda;
+            --secondary-color: #1e293b;
+            --background-dark: #0f172a;
+            --background-lighter: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+        }
+        body {
+            font-family: 'Lora', serif;
+            background-color: var(--background-dark);
+            color: var(--text-primary);
+        }
+        .navbar-custom {
+            font-family: 'Inter', sans-serif;
+            background-color: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #334155;
+        }
+        .navbar-brand { color: var(--primary-color) !important; font-weight: 700; }
+        .navbar-nav .nav-link { color: var(--text-secondary) !important; }
+        .navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color: var(--primary-color) !important; }
+
+        .post-header {
+            height: 70vh;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding: 40px;
+        }
+        .post-header::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.3));
+        }
+        .post-title-wrapper {
+            z-index: 1;
+        }
+        .post-title {
+            color: white;
+            font-size: 3.5rem;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+        }
+        .post-meta {
+            color: var(--text-secondary);
+            font-family: 'Inter', sans-serif;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        .post-content {
+            padding: 80px 0;
+            line-height: 2;
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+        }
+        .post-content p {
+            margin-bottom: 2rem;
+        }
+        .post-content h4 {
+            font-family: 'Inter', sans-serif;
+            color: var(--primary-color);
+            margin-top: 4rem;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+        .post-content img {
+            max-width: 100%;
+            border-radius: 15px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        .footer { font-family: 'Inter', sans-serif; background-color: var(--background-dark); padding: 2rem 0; text-align: center; border-top: 1px solid #334155; }
+        .contact-links a { color: var(--text-secondary); font-size: 2rem; margin: 0 15px; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">FENGSHUO LIU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border: none; color: var(--primary-color);"><i class="fas fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="post-header" style="background-image: url('assets/longjump1.jpg');">
+        <div class="post-title-wrapper">
+            <h1 class="post-title">Beyond the Finish Line: Lessons from the Long Jump Pit at 18</h1>
+        </div>
+    </header>
+
+    <main class="post-content">
+        <div class="container col-lg-7">
+            <p class="post-meta">
+                A personal essay on competition, perspective, and the nature of growth.
+            </p>
+            <p>
+                Thumbing through an old journal recently, I came across an entry penned on my 18th birthday. Written in the intense crucible of my final year of high school, it captured the raw aftermath of the last school sports meet I would ever compete in—a whirlwind of exhaustion, adrenaline, and confusion. Reading it now, from the vantage point of being 21, I see not just a teenager’s fixation on winning, but the nascent framework of a philosophy that still guides me today: the real competition is rarely against others, but against the limitations of your own perspective.
+            </p>
+
+            <h4>The Weight of Expectation</h4>
+            <p>
+                My final year of high school was a pressure cooker, a relentless cycle of study and exams. The annual sports meet was more than just a competition; it was a release valve, a sanctioned moment to burn with the untamed energy of youth before the final academic push. The night before, I lay awake, my mind electric with anticipation. I yearned to create a perfect, triumphant start to this final chapter of my school life, to feel the roar of the crowd as I soared. But with every surge of excitement, a voice of self-awareness pulled me back. I was acutely aware of my academic responsibilities and my own history of letting high expectations lead to bitter disappointment. This internal dialogue—the passionate athlete versus the pragmatic student—was the backdrop against which the entire experience unfolded. I was learning to navigate the tension between ambition and reality.
+            </p>
+
+            <h4>A Lesson in Another Man’s Script</h4>
+            <p>
+                A pivotal moment came during a training session. A teammate, Chy, confided in me. Despite six years of dedicated effort, he had never won a single medal. "I just want one," he said, his voice quiet but heavy with longing. His words struck me profoundly. I had often taken my own athletic successes for granted, my medals won through a combination of effort and natural talent. His struggle gave me a new lens through which to view fairness and fortune.
+            </p>
+            <p>
+                It was then I began to formulate an idea that has stayed with me ever since: we are all living out our own unique scripts. Some are gifted with early advantages, enjoying years of physical dominance that shapes their confidence. Others bloom late, finding their strength long after they’ve grown comfortable in the background. There is no single definition of success, only the honest performance of our own, individual narrative. For years, I had been insecure about my own physical development, watching peers grow taller and stronger. But in that moment, I found a sense of peace. My script was my own. Instead of envying others, my responsibility was simply to perform my own role to the best of my ability.
+            </p>
+
+            <img src="assets/longjump1.jpg" alt="Fengshuo Liu competing in the long jump">
+
+            <h4>The Final Jump</h4>
+            <p>
+                The memory of competition day remains intensely sensory: the damp chill of the grass, the tight embrace of my track spikes, the way the crowd at the edge of the runway seemed to blur into a single point of focus at the far end of the sandpit. My friends were there, but I could only offer a slight nod, my entire being focused on the task ahead. When my turn came, a hush fell. I stood at my mark, took a deep breath, and let out a low, guttural roar—a sound not for the audience, but to summon the conviction within myself. Then, I ran. The world narrowed to the accelerating rhythm of my feet on the red track. I hit the board, launched into the air, and landed with a spray of sand.
+            </p>
+            <p>
+                My final distance was 5.60 meters. It was a respectable jump, but I knew instantly it wasn't my best; I hadn’t even made full contact with the takeoff board. When a competitor later surpassed me with a 5.70, I felt a pang of disappointment, but it was overshadowed by a genuine respect for his achievement. The next day in the triple jump, I took a risk on my final attempt by switching my takeoff leg, a gamble that didn't pay off. My performance was inconsistent, ending with a result shorter than what I had achieved the year before. How can it be called youth without a touch of regret? In the end, I walked away with two medals. But lying on the grass afterward, as a friend came to console me, the victories felt complex, almost hollow.
+            </p>
+
+            <img src="assets/metal2.jpg" alt="A collection of high school sports medals">
+
+            <h4>The Weight of an Unearned Honor</h4>
+            <p>
+                The truth is, I felt I didn't fully deserve the triple jump medal. Several of the strongest competitors had opted out of the event that year, opening a path for me that might not have otherwise existed. This feeling of being an imposter, of winning through circumstance rather than superior performance, was a powerful lesson in humility. It taught me to separate the outcome from the process. The medal was a tangible object, but the real value lay in the struggle, the strategic gambles, and the honest self-assessment in the aftermath.
+            </p>
+            <p>
+                That 18-year-old boy, in his raw and earnest diary entry, confessed his deepest insecurities. He wrote about a persistent feeling of being undeserving of happiness, a fear that every joy would be paid for with an equal measure of pain. He wrote about his evolving worldview, moving from admiring superficial perfection to respecting those who showed strength in fragility, who found light in the struggle. Today, I no longer live on that red track. I apply that same intensity and desire to excel to the world of quantitative models and academic research. But the boy who ran that race is still part of me. He taught me that medals tarnish and records are broken, but the integrity of the process—the courage to embrace your own script, to face down your insecurities, and to find grace in an imperfect performance—is timeless. That is the victory I carry with me still.
+            </p>
+            <img src="assets/metal1.jpg" alt="More sports medals on a document">
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="contact-links mb-4">
+                <a href="https://www.linkedin.com/in/fengshuo-liu-722169307" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Adkid-Zephyr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="text-secondary">&copy; 2025 Fengshuo Liu. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

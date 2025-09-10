@@ -4,16 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fengshuo Liu - Portfolio</title>
-    
-    <!-- Bootstrap 5 CSS -->
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
+
     <style>
         :root {
             --primary-color: #64ffda;
@@ -25,13 +20,7 @@
             --accent-color: #38bdf8;
             --border-color: #334155;
         }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--background-dark);
@@ -39,115 +28,42 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--background-dark);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-color);
-            border-radius: 4px;
-        }
-
-        /* Navbar Styles */
         .navbar-custom {
             background-color: rgba(15, 23, 42, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border-color);
             transition: all 0.3s ease;
         }
-
         .navbar-brand {
             color: var(--primary-color) !important;
             font-weight: 700;
             font-size: 1.5rem;
-            letter-spacing: 0.5px;
         }
-
         .navbar-nav .nav-link {
             color: var(--text-secondary) !important;
             font-weight: 500;
             margin: 0 10px;
             transition: color 0.3s ease;
-            position: relative;
         }
-
         .navbar-nav .nav-link:hover,
         .navbar-nav .nav-link.active {
             color: var(--primary-color) !important;
         }
-
-        .navbar-nav .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 0;
-            height: 2px;
-            background-color: var(--primary-color);
-            transition: width 0.3s ease;
-        }
-
-        .navbar-nav .nav-link:hover::after,
-        .navbar-nav .nav-link.active::after {
-            width: 100%;
-        }
-
-        /* Hero Section */
         .hero-section {
             min-height: 100vh;
             background: linear-gradient(135deg, var(--background-dark) 0%, var(--secondary-color) 100%);
             display: flex;
             align-items: center;
-            position: relative;
         }
-
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23334155" stroke-width="0.5" opacity="0.3"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
-            opacity: 0.1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-        }
-
         .hero-title {
             font-size: 4rem;
             font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out;
         }
-
         .hero-subtitle {
             font-size: 1.5rem;
             color: var(--primary-color);
             margin-bottom: 2rem;
-            animation: fadeInUp 1s ease-out 0.2s both;
         }
-
-        .hero-buttons {
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-
         .btn-primary-custom {
             background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
             border: none;
@@ -155,18 +71,13 @@
             font-weight: 600;
             padding: 12px 30px;
             border-radius: 50px;
-            margin-right: 15px;
             transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
         }
-
         .btn-primary-custom:hover {
             transform: translateY(-3px);
             box-shadow: 0 10px 25px rgba(100, 255, 218, 0.3);
-            color: var(--background-dark);
         }
-
         .btn-secondary-custom {
             background: transparent;
             border: 2px solid var(--primary-color);
@@ -176,605 +87,347 @@
             border-radius: 50px;
             transition: all 0.3s ease;
             text-decoration: none;
-            display: inline-block;
         }
-
         .btn-secondary-custom:hover {
             background: var(--primary-color);
             color: var(--background-dark);
-            transform: translateY(-3px);
         }
-
-        /* Section Styles */
-        .section-padding {
-            padding: 80px 0;
-        }
-
+        .section-padding { padding: 100px 0; }
         .section-title {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--text-primary);
             text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
+            margin-bottom: 4rem;
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-            border-radius: 2px;
-        }
-
-        /* About Section */
-        .about-section {
-            background-color: var(--secondary-color);
-        }
-
-        .about-content {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 2rem;
-        }
-
+        /* About Section Styles with Image */
+        .about-section { background-color: var(--secondary-color); }
+        .skills-list { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 2rem; }
         .skill-tag {
             background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
             color: var(--background-dark);
             padding: 8px 20px;
             border-radius: 25px;
             font-weight: 500;
-            font-size: 0.9rem;
+        }
+        .profile-image-wrapper {
+            position: relative;
+            display: inline-block;
+        }
+        .profile-image-wrapper::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: -20px;
+            bottom: -20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 15px;
+            z-index: 0;
+            transition: all 0.3s ease;
+        }
+        .profile-image-wrapper img {
+            border-radius: 15px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+        }
+        .profile-image-wrapper:hover::before {
+            transform: translate(5px, 5px);
         }
 
-        /* Projects Section */
-        .project-card {
+        .project-card, .education-card {
             background: var(--background-lighter);
             border: 1px solid var(--border-color);
             border-radius: 15px;
             padding: 2rem;
             height: 100%;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
         }
-
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-        }
-
-        .project-card:hover {
+        .project-card:hover, .education-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            border-color: var(--primary-color);
         }
 
-        .project-title {
-            color: var(--text-primary);
-            font-size: 1.4rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .project-description {
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-
-        /* Experience Section */
-        .experience-section {
-            background-color: var(--secondary-color);
-        }
-
-        .timeline {
+        /* New Experience Section Styles */
+        .experience-section { background-color: var(--secondary-color); }
+        .timeline-wrapper {
             position: relative;
-            padding: 0;
-            list-style: none;
+            max-width: 900px;
+            margin: auto;
         }
-
-        .timeline::before {
+        .timeline-wrapper::after {
             content: '';
             position: absolute;
+            width: 3px;
+            background: var(--border-color);
             top: 0;
             bottom: 0;
             left: 50%;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+            margin-left: -1.5px;
         }
-
         .timeline-item {
+            padding: 10px 40px;
             position: relative;
-            margin-bottom: 3rem;
+            width: 50%;
         }
-
-        .timeline-item:nth-child(odd) .timeline-content {
-            margin-left: 0;
-            margin-right: calc(50% + 30px);
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            right: -10px;
+            background-color: var(--background-dark);
+            border: 4px solid var(--primary-color);
+            top: 15px;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .timeline-item.left {
+            left: 0;
             text-align: right;
         }
-
-        .timeline-item:nth-child(even) .timeline-content {
-            margin-left: calc(50% + 30px);
-            margin-right: 0;
-        }
-
-        .timeline-marker {
-            position: absolute;
-            top: 0;
+        .timeline-item.right {
             left: 50%;
-            transform: translateX(-50%);
-            width: 16px;
-            height: 16px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            z-index: 2;
         }
-
+        .timeline-item.right::after {
+            left: -10px;
+        }
         .timeline-content {
+            padding: 20px 30px;
             background: var(--background-lighter);
-            border: 1px solid var(--border-color);
+            position: relative;
             border-radius: 10px;
-            padding: 1.5rem;
+            border: 1px solid var(--border-color);
         }
-
-        .timeline-title {
-            color: var(--text-primary);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+        .timeline-title { font-weight: 600; color: var(--text-primary); }
+        .timeline-date { color: var(--primary-color); font-size: 0.9rem; margin-bottom: 10px; }
+        .timeline-description { color: var(--text-secondary); }
+        .timeline-description ul {
+            list-style-position: outside;
+            padding-left: 20px;
+            text-align: left; /* Keep list text left-aligned for readability */
         }
+        .timeline-description li { margin-bottom: 10px; }
 
-        .timeline-date {
-            color: var(--primary-color);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .timeline-description {
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        /* Education Section */
-        .education-card {
-            background: var(--background-lighter);
+        .gateway-card {
+            display: block;
+            background: var(--background-dark);
             border: 1px solid var(--border-color);
             border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            transition: all 0.3s ease;
-        }
-
-        .education-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-        }
-
-        .education-title {
-            color: var(--text-primary);
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .education-date {
-            color: var(--primary-color);
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
-        }
-
-        .education-award {
-            background: rgba(100, 255, 218, 0.1);
-            color: var(--primary-color);
-            padding: 8px 15px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            display: inline-block;
-            margin-top: 1rem;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            background-color: var(--secondary-color);
-        }
-
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 2rem;
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            color: var(--text-secondary);
+            padding: 2.5rem;
+            height: 100%;
             text-decoration: none;
-            font-size: 1.1rem;
             transition: all 0.3s ease;
         }
-
-        .contact-link i {
-            margin-right: 10px;
-            font-size: 1.3rem;
+        .gateway-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            border-color: var(--primary-color);
         }
-
-        .contact-link:hover {
-            color: var(--primary-color);
-            transform: translateY(-3px);
-        }
-
-        /* Footer */
+        .gateway-card h3 { color: var(--text-primary); }
+        .gateway-card span { color: var(--primary-color); font-weight: 600; }
         .footer {
             background-color: var(--background-dark);
             padding: 2rem 0;
             text-align: center;
             border-top: 1px solid var(--border-color);
         }
-
-        .footer p {
+        .contact-links a {
             color: var(--text-secondary);
-            margin: 0;
+            font-size: 2rem;
+            margin: 0 15px;
+            transition: all 0.3s ease;
         }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .hero-title {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.2rem;
-            }
-
-            .timeline::before {
-                left: 20px;
-            }
-
-            .timeline-item:nth-child(odd) .timeline-content,
-            .timeline-item:nth-child(even) .timeline-content {
-                margin-left: 50px;
-                margin-right: 0;
-                text-align: left;
-            }
-
-            .timeline-marker {
-                left: 20px;
-            }
-
-            .contact-links {
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-            }
-
-            .section-padding {
-                padding: 60px 0;
-            }
+        .contact-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-5px);
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
+
     <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#home">FENGSHUO LIU</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-                    style="border: none; color: var(--primary-color);">
-                <i class="fas fa-bars"></i>
-            </button>
+            <a class="navbar-brand" href="index.html">FENGSHUO LIU</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="border: none; color: var(--primary-color);"><i class="fas fa-bars"></i></button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#experience">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#education">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="index.html#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="hero-section">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 hero-content">
-                    <h1 class="hero-title">FENGSHUO LIU</h1>
-                    <p class="hero-subtitle">Quantitative Researcher | Applied Mathematician | Financial Engineer</p>
-                    <div class="hero-buttons">
-                        <a href="#projects" class="btn-primary-custom">View My Projects</a>
-                        <a href="#" class="btn-secondary-custom">Download CV</a>
-                    </div>
-                </div>
+            <h1 class="hero-title">FENGSHUO LIU</h1>
+            <p class="hero-subtitle">Quantitative Researcher | Applied Mathematician | Financial Engineer</p>
+            <div>
+                <a href="#projects" class="btn-primary-custom">View My Work</a>
+                <a href="/assets/CV_FENGSHUO_LIU.pdf" target="_blank" class="btn-secondary-custom">Download CV</a>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
     <section id="about" class="about-section section-padding">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 class="section-title fade-in">About Me</h2>
-                    <div class="about-content fade-in">
-                        <p>I am a highly motivated dual-degree student in Applied Mathematics at the University of Birmingham and Information & Computing Science at Jinan University. I am passionate about the intersection of machine learning, stochastic modeling, and high-performance computing to solve complex challenges in financial markets. My goal is to pursue a Master's degree to deepen my expertise in scientific computing and quantitative analysis.</p>
-                    </div>
-                    <div class="skills-list fade-in">
+            <h2 class="section-title">About Me</h2>
+            <div class="row align-items-center">
+                <div class="col-lg-7">
+                    <p class="text-secondary fs-5 mb-4">A highly motivated dual-degree student in Applied Mathematics at the University of Birmingham and Information & Computing Science at Jinan University. I am passionate about the intersection of machine learning, stochastic modeling, and high-performance computing to solve complex challenges in financial markets. My goal is to pursue a Master's degree to deepen my expertise in scientific computing and quantitative analysis.</p>
+                    <div class="skills-list">
                         <span class="skill-tag">Quantitative Analysis</span>
-                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Artificial Intelligence</span>
                         <span class="skill-tag">Financial Modeling</span>
                         <span class="skill-tag">Evolutionary Computation</span>
-                        <span class="skill-tag">Python (Pandas, Scikit-learn)</span>
+                        <span class="skill-tag">Reinforcement Learning</span>
                         <span class="skill-tag">Monte-Carlo Simulation</span>
                     </div>
                 </div>
+                <div class="col-lg-5 text-center text-lg-end mt-5 mt-lg-0">
+                    <div class="profile-image-wrapper">
+                        <img src="/assets/profile-photo.jpg" alt="Fengshuo Liu" class="img-fluid">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="section-padding">
         <div class="container">
-            <h2 class="section-title fade-in">Projects Portfolio</h2>
+            <h2 class="section-title">Projects Portfolio</h2>
             <div class="row">
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card fade-in">
-                        <h3 class="project-title">Evolutionary Ensemble Learning for Quant Trading</h3>
-                        <p class="project-description">Led a research group to develop and live-trade a novel strategy in A-share/ETF markets. Utilized evolutionary-ensemble computation to integrate heterogeneous models, achieving a Sharpe Ratio of 5.9 and an annualized return over 235% in a live environment.</p>
+                    <div class="project-card">
+                        <h5 class="text-primary">Academic Research</h5>
+                        <h4>Evolutionary Ensemble Learning for Quant Trading</h4>
+                        <p class="text-secondary">Led a research group on cutting-edge ML, integrated models with evolutionary-ensemble computation, and live-traded the strategy, achieving a Sharpe Ratio of 5.9 and annualized return >235% (with huge luck).</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card fade-in">
-                        <h3 class="project-title">High-Performance Monte-Carlo Pricing Engine</h3>
-                        <p class="project-description">Developed a pricing engine for equity-linked snowball autocallables using Monte-Carlo simulation with 20k antithetic paths. The engine delivers Present Value and Delta in under 1 second and features plug-and-play volatility surfaces.</p>
+                    <div class="project-card">
+                        <h5 class="text-primary">Internship Project</h5>
+                        <h4>High-Performance Monte-Carlo Pricing Engine</h4>
+                        <p class="text-secondary">Leveraging AI tools, developed a pricing engine for equity-linked snowball autocallables, delivering PV and Delta in under 1 second.</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 mb-4">
-                    <div class="project-card fade-in">
-                        <h3 class="project-title">Alpha Factor Development (WorldQuant Challenge)</h3>
-                        <p class="project-description">Designed and submitted an active alpha factor for the Chinese Top 3000 stock universe. My contribution successfully reached the Bronze Level in the highly competitive 2023 challenge, validating its effectiveness.</p>
+                    <div class="project-card">
+                        <h5 class="text-primary">Internship Project</h5>
+                        <h4>IPO Prospectus & Due Diligence</h4>
+                        <p class="text-secondary">Assisted in cleaning audited statements for an IPO prospectus and co-authored a due-diligence memo adopted by the VP.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
     <section id="experience" class="experience-section section-padding">
         <div class="container">
-            <h2 class="section-title fade-in">Professional Experience</h2>
-            <div class="timeline fade-in">
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline-wrapper">
+                <div class="timeline-item left">
                     <div class="timeline-content">
-                        <h3 class="timeline-title">Securities Investment Intern - Guosen Securities</h3>
+                        <h4 class="timeline-title">Securities Investment Intern - Guosen Securities</h4>
                         <p class="timeline-date">Jul. 2025 - Present</p>
-                        <p class="timeline-description">Conducted in-depth analysis of Vanilla and Barrier Options and contributed to trading strategy development. Assisted in risk management and basic hedging strategies.</p>
+                        <p class="timeline-description">Conducted analysis of options, contributed to trading strategy development, and assisted in risk management.</p> 
                     </div>
                 </div>
-                <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                <div class="timeline-item right">
+                       <div class="timeline-content">
+                            <h4 class="timeline-title">Research Assistant – EEL Project - Jinan University</h4>
+                            <p class="timeline-date">Oct. 2024 - Jun. 2025</p>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Led a reading group on cutting-edge ML, with deep dives into attention mechanisms and the Transformer model.</li>
+                                    <li>Employed evolutionary-ensemble computation to integrate models and refined strategies into a deployable system.</li>
+                                    <li>Live-traded a strategy in A-share/ETF markets, achieving a Sharpe of 5.9 and annualized return >235%.</li>
+                                    <li>Identified cross-market robustness as the next critical challenge, proposing an adaptive validation framework.</li>
+                                </ul>
+                            </div>
+                        </div>
+                </div>
+                     <div class="timeline-item left">
                     <div class="timeline-content">
-                        <h3 class="timeline-title">Investment Banking Intern - CITIC Securities</h3>
+                        <h4 class="timeline-title">Investment Banking Intern - CITIC Securities</h4>
                         <p class="timeline-date">Jul. 2024 - Oct. 2024</p>
-                        <p class="timeline-description">Assisted in cleaning audited statements for a Main-Board IPO prospectus and participated in authoring a 20-page due-diligence memo adopted by the VP for the CSRC response.</p>
+                        <p class="timeline-description">Assisted in cleaning audited statements for an IPO prospectus and co-authored a due-diligence memo adopted by the VP.</p>
+                    </div>
+                </div>
+                     <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <h4 class="timeline-title">Corporate Banking Intern - Bank of China</h4>
+                        <p class="timeline-date">Dec. 2022 - Feb. 2023</p>
+                        <p class="timeline-description">Assisted in performing KYC and financial-statement screening for 100+ clients.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section-padding">
+    <section id="gateway" class="section-padding">
         <div class="container">
-            <h2 class="section-title fade-in">Education</h2>
+                 <h2 class="section-title">Explore More</h2>
             <div class="row">
-                <div class="col-lg-6">
-                    <div class="education-card fade-in">
-                        <h3 class="education-title">BSc Applied Mathematics</h3>
-                        <h4 style="color: var(--text-secondary); margin-bottom: 0.5rem;">University of Birmingham</h4>
-                        <p class="education-date">Sep. 2022 - Jun. 2025</p>
-                    </div>
+                <div class="col-md-6 mb-4">
+                    <a href="blog.html" class="gateway-card text-decoration-none">
+                        <h3>My Life & Journeys</h3>
+                        <p class="text-secondary">Discover my stories from traveling solo across Europe, my passion for sports, and my thoughts on life.</p>
+                        <span>Read My Blog &rarr;</span>
+                    </a>
                 </div>
-                <div class="col-lg-6">
-                    <div class="education-card fade-in">
-                        <h3 class="education-title">BSc Information & Computing Science</h3>
-                        <h4 style="color: var(--text-secondary); margin-bottom: 0.5rem;">Jinan University</h4>
-                        <p class="education-date">Sep. 2022 - Jun. 2026</p>
-                        <span class="education-award">First Honor Scholarship of JNU (Top 2% of major)</span>
-                    </div>
+                <div class="col-md-6 mb-4">
+                    <a href="contact.html" class="gateway-card text-decoration-none">
+                        <h3>Get In Touch</h3>
+                        <p class="text-secondary">Find my social media profiles, including LinkedIn, GitHub, and other ways to connect with me.</p>
+                        <span>Contact Me &rarr;</span>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section section-padding">
-        <div class="container">
-            <h2 class="section-title fade-in">Get In Touch</h2>
-            <div class="contact-links fade-in">
-                <a href="mailto:your.email@example.com" class="contact-link">
-                    <i class="fas fa-envelope"></i>
-                    your.email@example.com
-                </a>
-                <a href="#" class="contact-link">
-                    <i class="fab fa-linkedin"></i>
-                    LinkedIn
-                </a>
-                <a href="#" class="contact-link">
-                    <i class="fab fa-github"></i>
-                    GitHub
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Fengshuo Liu. All rights reserved.</p>
+            <div class="contact-links mb-4">
+                <a href="https://www.linkedin.com/in/fengshuo-liu-722169307" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Adkid-Zephyr" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
+            <p class="text-secondary">&copy; 2025 Fengshuo Liu. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
     <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    const offsetTop = target.offsetTop - 70; // Account for fixed navbar
-                    window.scrollTo({
-                        top: offsetTop,
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
+        // Active link switching
+        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+        const sections = document.querySelectorAll('section');
 
-        // Update active navigation link based on scroll position
         window.addEventListener('scroll', () => {
-            const sections = document.querySelectorAll('section[id]');
-            const scrollPosition = window.scrollY + 100;
-
+            let current = 'home';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                const sectionId = section.getAttribute('id');
-                const navLink = document.querySelector(`.navbar-nav a[href="#${sectionId}"]`);
-
-                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                    document.querySelectorAll('.navbar-nav .nav-link').forEach(link => {
-                        link.classList.remove('active');
-                    });
-                    if (navLink) {
-                        navLink.classList.add('active');
-                    }
+                if (pageYOffset >= sectionTop - 75) {
+                    current = section.getAttribute('id');
                 }
             });
 
-            // Add shadow to navbar on scroll
-            const navbar = document.querySelector('.navbar-custom');
-            if (window.scrollY > 50) {
-                navbar.style.backgroundColor = 'rgba(15, 23, 42, 0.98)';
-                navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.3)';
-            } else {
-                navbar.style.backgroundColor = 'rgba(15, 23, 42, 0.95)';
-                navbar.style.boxShadow = 'none';
-            }
-        });
-
-        // Intersection Observer for fade-in animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (current && link.href && link.href.includes(current)) {
+                    link.classList.add('active');
                 }
             });
-        }, observerOptions);
-
-        // Observe all elements with fade-in class
-        document.querySelectorAll('.fade-in').forEach(el => {
-            observer.observe(el);
-        });
-
-        // Add some interactive hover effects
-        document.querySelectorAll('.project-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.borderColor = 'var(--primary-color)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.borderColor = 'var(--border-color)';
-            });
-        });
-
-        // Add parallax effect to hero section
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const hero = document.querySelector('.hero-section');
-            if (hero) {
-                hero.style.transform = `translateY(${scrolled * 0.5}px)`;
+            if (window.scrollY < 200) {
+                 document.querySelector('.navbar-nav a[href="index.html"]').classList.add('active');
             }
         });
-
-        // Typing effect for hero subtitle (optional enhancement)
-        const subtitle = document.querySelector('.hero-subtitle');
-        const text = subtitle.textContent;
-        subtitle.textContent = '';
-        
-        let i = 0;
-        const typeWriter = () => {
-            if (i < text.length) {
-                subtitle.textContent += text.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            }
-        };
-        
-        // Start typing effect after initial animation
-        setTimeout(typeWriter, 1000);
     </script>
 </body>
 </html>
